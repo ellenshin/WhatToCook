@@ -67,7 +67,8 @@
             android:layout_alignParentRight="true"
             android:layout_marginEnd="7dp"
             app:srcCompat="@drawable/cooking"
-            android:background="#FFFFFF"/>
+            android:background="#FFFFFF"
+            />
 
     </RelativeLayout>
 

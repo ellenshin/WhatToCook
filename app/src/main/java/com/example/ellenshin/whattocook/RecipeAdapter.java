@@ -1,5 +1,6 @@
 package com.example.ellenshin.whattocook;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -142,8 +143,11 @@ public class RecipeAdapter extends BaseAdapter {
         // now you need to pass contxt, channel id -> "default"
         NotificationCompat.Builder builder = new NotificationCompat.Builder(myContext, "default");
 
+        String content = "The instruction for " + title + " can be found here!";
         //set icons
         builder.setSmallIcon(android.R.drawable.btn_star);
+        builder.setStyle(new NotificationCompat.BigTextStyle(builder)
+                        .bigText(content));
 
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
 
@@ -151,9 +155,10 @@ public class RecipeAdapter extends BaseAdapter {
         PendingIntent pendingIntent = PendingIntent.getActivity(myContext,0, intent, 0);
         builder.setContentIntent(pendingIntent);
 
+
         //set the titile and content of the notif
         builder.setContentTitle("Cooking Instruction");
-        builder.setContentText("The instruction for " + title + " can be found here!");
+        builder.setContentText(content);
 
         // get the system service to display this notification
         NotificationManager notificationManager = (NotificationManager) myContext.getSystemService(NOTIFICATION_SERVICE);
