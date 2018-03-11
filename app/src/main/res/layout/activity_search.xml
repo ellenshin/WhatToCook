@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/diet_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
+        <TextView
+            android:id="@+id/diet_restriction_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="106dp"
+            android:text="Diet Restriction" />
+
+        <Spinner
+            android:id="@+id/diet_restriction_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_toEndOf="@id/diet_restriction_textview"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="106dp"
+            android:layout_marginLeft="30dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/serving_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diet_layout"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
+
+        <TextView
+            android:id="@+id/serving_restriction_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Serving Restriction" />
+
+        <Spinner
+            android:id="@+id/serving_restriction_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_toEndOf="@id/serving_restriction_textview"
+            android:spinnerMode="dropdown"
+            android:layout_marginLeft="30dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serving_layout"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp">
+        <TextView
+            android:id="@+id/prep_time_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preparation Time" />
+
+        <Spinner
+            android:id="@+id/prep_time_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_toEndOf="@id/prep_time_textview"
+            android:spinnerMode="dropdown"
+            android:layout_marginLeft="30dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:onClick="onClickSearch"
+        android:text="Search" />
+
+</RelativeLayout>
